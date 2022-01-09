@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link href="style-calladriver.css" rel="stylesheet" type="text/css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="style-map.css">
+  <meta name="description" content="Agendamento de corridas de pets">
+  <meta name="keywords" content="Pet, agendamento, agendamento online, corrida">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Go Pet - Solicite sua corrida</title>
+</head>
+
+<body>
+  <div id="root">
+    <header>
+      <nav>
+        <a class="logo" href="index.html">GoPet</a>
+        <div class="mobile-menu">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+        <ul class="nav-list">
+          <li><a href="index.html">INÍCIO</a></li>
+          <li><a href="whoWeAre.html">QUEM SOMOS</a></li>
+          <li><a href="passenger.html">PASSAGEIRO</a></li>
+          <li><a href="driver.html">MOTORISTA</a></li>
+          <li><a href="faq.html">AJUDA</a></li>
+          <li><a href="recommendations.html">RECOMENDAÇÕES</a></li>
+          <li><a href="contactUs.html">FALE CONOSCO</a></li>
+          <li><a href="callADriver.html">PEDIR CORRIDA</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="container">
+      <div class="content">
+        <div id="whereYouWantToGo" class="whereYouWantToGo">
+          <div class="label-content inline-flex">
+            <div class="where-you-want-to-go-label">
+              <h1>Para onde deseja ir?</h1>
+            </div>
+
+            <div class="schedule">
+              <label>Agendar corrida:</label>
+              <input id="appointment_date" type="datetime-local" name="appointment_date" class="inputCallADriver" />
+            </div>
+          </div>
+        </div>
+        <br>
+        <div id="inputSection" class="inputSection">
+          <input id="origin" type="text" name="origin"  class="inputCallADriver" placeholder="Origem" required/>
+          <input id="destination" type="text" name="destination" class="inputCallADriver" placeholder="Destino" required/>
+        </div>
+        <div id="selectYourPet">
+          <h1 style="padding: 8px 0; font-size: 24px;">Selecione o(s) seu(s) pet(s):</h1>
+          <div id="selectYourPetContent" class="selectYourPetContent">
+            <div class="selectPets">
+              <div id="container_left" class="container_left">
+                <label>Pet 1:</label>
+                <select class="inputSelect" name="selectPets" id="petSelect1">
+                  <option value="">SELECIONE UM PET</option>
+                  <option value="Malu">Malu</option>
+                  <option value="Bob">Bob</option>
+                  <option value="Nina">Nina</option>
+                </select>
+
+                <label>Pet 2:</label>
+                <select class="inputSelect" name="selectPets" id="petSelect2">
+                  <option value="">SELECIONE OUTRO PET</option>
+                  <option value="Malu">Malu</option>
+                  <option value="Bob">Bob</option>
+                  <option value="Nina">Nina</option>
+                </select>
+                <br>
+                <label>Método de pagamento:</label>
+                <select class="inputSelect" name="selectPayments" id="payment">
+                  <option value="">SELECIONE O MÉTODO DE PAGAMENTO</option>
+                  <option value="creditCard">Cartão de crédito</option>
+                  <option value="debtCard">Cartão de débito</option>
+                  <option value="money">Dinheiro</option>
+                </select>
+
+              </div>
+              <div id="container_right" class="container_right">
+                <button id="btn_call_a_driver" class="orangeBtn" onclick='callADriver()'>
+                  Solicitar corrida
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="map"></div>
+      </div>
+    </div>
+    <footer>
+      <div class="links_section">
+          <div class="mot_links">
+              <ul>
+                  <li>
+                      <a href="index.html">Início</a>
+                  </li>
+                  <li>
+                      <a href="whoWeAre.html">Quem somos</a>
+                  </li>
+                  <li>
+                      <a href="contactUs.html">Fale conosco</a>
+                  </li>
+                  <li>
+                      <a href="faq.html">Ajuda</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </footer>
+  </div>
+  <script type="text/javascript" src="script-mobile-navbar.js"></script>
+  <script src="script-map.js"></script>
+  <script src="script-callADriver.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA017yolnkWKAkqxdOjG5ETS-KZNoHZink&callback=initMap"
+        async defer defer></script>
+   
+</body>
+
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Go Pet</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style-tab.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Go Pet</title>
+</head>
+
+<body>
+  <div class="background-home">
+    <div class="wrapperHome">
+
+      <header>
+        <nav>
+          <a class="logo" href="index.html">GoPet</a>
+          <div class="mobile-menu">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
+          <ul class="nav-list">
+            <li><a href="index.html">INÍCIO</a></li>
+            <li><a href="whoWeAre.html">QUEM SOMOS</a></li>
+            <li><a href="passenger.html">PASSAGEIRO</a></li>
+            <li><a href="driver.html">MOTORISTA</a></li>
+            <li><a href="faq.html">AJUDA</a></li>
+            <li><a href="recommendations.html">RECOMENDAÇÕES</a></li>
+            <li><a href="contactUs.html">FALE CONOSCO</a></li>
+            <li><a href="callADriver.html">PEDIR CORRIDA</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <div class="containerHome">
+        <div id="tabs">
+          <div class="tab-links">
+            <button data-id="loginP" data-default>Login do Passageiro</button>
+            <button data-id="loginM">Login do Motorista</button>
+          </div>
+
+          <div class="tab-content">
+            <section id="loginP">
+              <div class="card">
+                <h1>Login como Passageiro</h1>
+                <div id="errorMsg"></div>
+                <div class="label-float">
+                  <input type="text" id="user" name="user" paceholder="" required>
+                  <label id="userLabel" for="user">E-mail</label>
+                </div>
+                <div class="label-float">
+                  <input type="password" id="passwordLogin" name="passwordLogin" paceholder="" required>
+                  <label id="passwordLabel" for="passwordLogin">Senha</label>
+                  <i class="fa fa-eye" aria-hidden="true"></i>
+                </div>
+                <div class="justify-center">
+                  <button onclick="tutorLogin()" type="submit">Entrar</button>
+                </div>
+
+                <div class="justify-center">
+                  <hr>
+                </div>
+                <div class="reset-senha">
+                  <p>
+                    <a onclick="recoverPassword()"> Esqueci minha senha </a>
+                  </p>
+                  <div class="modal">
+                    <div onclick="close()" class="fechar">
+                      <label class="labelX">x</label>
+                    </div>
+                    <label class="recoverText" for="recoverPassword">As instruções para alteração da senha serão
+                      enviadas para o e-mail
+                      cadastrado. Digite-o abaixo:
+                    </label>
+                    <br><br>
+                    <input class="recoverPassword" type="text" id="recoverPassword"></input>
+                    <br>
+                    <div class="emailButton">
+                      <button onclick="close()" class="sendEmail" id="sendEmail" type="submit">Recuperar
+                        senha</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="homeRegistration">
+                  <br>
+                  <label>Não tem uma conta?</label>
+                  <br>
+                  <br>
+                  <a href='tutorRegistration.html'> Cadastre-se como usuário </a>
+                  <br>
+                  <a href='driverRegistration.html'> Cadastre-se como motorista </a>
+                </div>
+              </div>
+            </section>
+
+            <section id="loginM">
+              <div class="card">
+                <h1>Login como Motorista</h1>
+                <div id="errorMsg2"></div>
+                <div class="label-float">
+                  <input type="text" id="user2" name="user2" paceholder="" required>
+                  <label id="userLabel2" for="user2">E-mail</label>
+                </div>
+                <div class="label-float">
+                  <input type="password" id="passwordLogin2" name="passwordLogin2" paceholder="" required>
+                  <label id="passwordLabel2" for="passwordLogin2">Senha</label>
+                  <i class="fa fa-eye" id="passwordView2" aria-hidden="true"></i>
+                </div>
+                <div class="justify-center">
+                  <button onclick="driverLogin()" type="submit">Entrar</button>
+                </div>
+
+                <div class="justify-center">
+                  <hr>
+                </div>
+                <div class="reset-senha">
+                  <p>
+                    <a onclick="recoverPassword2()"> Esqueci minha senha </a>
+                  </p>
+                  <div class="modal2">
+                    <div onclick="close2()" class="fechar">
+                      <label class="labelX">x</label>
+                    </div>
+                    <label class="recoverText" for="recoverPassword">As instruções para alteração da senha serão
+                      enviadas para o e-mail
+                      cadastrado. Digite-o abaixo:
+                    </label>
+                    <br><br>
+                    <input class="recoverPassword" type="text" id="recoverPassword"></input>
+                    <br>
+                    <div class="emailButton">
+                      <button onclick="close2()" class="sendEmail" id="sendEmail" 
+                      type="submit">Recuperar
+                        senha</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="homeRegistration">
+                  <br>
+                  <label>Não tem uma conta?</label>
+                  <br>
+                  <br>
+                  <a href='tutorRegistration.html'> Cadastre-se como usuário </a>
+                  <br>
+                  <a href='driverRegistration.html'> Cadastre-se como motorista </a>
+                </div>
+              </div>
+            </section>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="textHome">
+        <h1>
+          Com a Go Pet seu animalzinho vai muito mais longe
+        </h1>
+        <br>
+        <p>Lugar de pet é perto da gente. Com a GoPet você viaja de forma segura e responsável
+          para incluí-lo no próximo passeio!
+        </p>
+      </div>
+      <footer>
+        <div class="links_section">
+          <div>
+            <ul>
+              <li>
+                <a href="index.html">Início</a>
+              </li>
+              <li>
+                <a href="whoWeAre.html">Quem somos</a>
+              </li>
+              <li>
+                <a href="contactUs.html">Fale conosco</a>
+              </li>
+              <li>
+                <a href="faq.html">Ajuda</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </footer>
+    </div>
+  </div>
+  <script type="text/javascript" src="script-mobile-navbar.js"></script>
+  <script type="text/javascript" src="script-home.js"></script>
+  <script type="text/javascript" src="script-tab-login.js"></script>
+</body>
+
+</html>

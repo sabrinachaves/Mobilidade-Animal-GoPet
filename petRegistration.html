@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie-edge">
+  <title>Go Pet - Cadastro do Pet</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+      <nav>
+        <a class="logo" href="index.html">GoPet</a>
+        <div class="mobile-menu">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+        <ul class="nav-list">
+          <li><a href="index.html">INÍCIO</a></li>
+          <li><a href="whoWeAre.html">QUEM SOMOS</a></li>
+          <li><a href="passenger.html">PASSAGEIRO</a></li>
+          <li><a href="driver.html">MOTORISTA</a></li>
+          <li><a href="faq.html">AJUDA</a></li>
+          <li><a href="recommendations.html">RECOMENDAÇÕES</a></li>
+          <li><a href="contactUs.html">FALE CONOSCO</a></li>
+          <li><a href="callADriver.html">PEDIR CORRIDA</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="title">
+      <h1>Cadastro do Pet</h1>
+      <div id="errorMsg"></div>
+      <div id="successMsg"></div>
+    </div>
+
+    <div class="photos">
+      <img src="assets/img/cachorroperfil.jpeg" class="registrationPhoto" id=registrationPhoto alt="Selecione a foto do tutor"><br><br>
+      <input class="form-control" type="file" id="flImage" accept="image/*">
+    </div>
+
+    <div class="contentRegistration">
+      <class class="registrationForm" name="registrationPet" id="registrationForm">
+        <div class="form-data">
+
+          <label id="labelName" for="name">Nome*</label><br>
+          <input class="form-control" type="text" id="name" required>
+          <br>
+        </div>
+        <br>
+        <div class="form-check">
+          <label id="labelGender" for="gender">Sexo*</label><br>
+          <input class="form-check-input" name="gender" type="radio" id="femea" required>
+          <label class="form-check-label" for="femea">Fêmea</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" name="gender" type="radio" id="macho" required>
+          <label class="form-check-label" for="macho">Macho</label>
+        </div>
+        <br>
+        <div class="form-data">
+          <label id="labelAge" for="age">Idade*</label><br>
+          <input class="form-control" type="age" id="age" name="age" required>
+        </div>
+        <br>
+        <div class="form-data">
+          <label id="labelRace" for="race">Raça*</label><br>
+          <input class="form-control" type="text" id="race" name="race" required>
+        </div>
+        <br>
+        <div class="form-data">
+          <label id="labelColor" for="color">Cor*</label><br>
+          <input class="form-control" type="text" id="color" name="color" required>
+        </div>
+        <br>
+        <div class="form-data">
+          <label id="labelWeight" for="weight">Peso (kg)*</label><br>
+          <input class="form-control" type="number" id="weight" name="weight" required>
+        </div>
+        <br>
+        <div class="form-data">
+          <label id="labelCare" for="care">Cuidados Especiais</label><br>
+          <textarea class="form-control" type="text" id="care" name="care" rows="3"></textarea>
+        </div>
+        <br>
+        <div class="form-data">
+          <label id="labelSize" for="size">Porte do Pet*</label><br>
+          <select class="form-control" name="size" required>
+            <option selected class="form-data">Escolha uma opção</option>
+            <option value="1">Pequeno</option>
+            <option value="2">Médio</option>
+            <option value="3">Grande</option>
+          </select>
+        </div>
+        <br>
+        <div class="buttons">
+          <button onclick="petRegistration()" href="tutorArea.html" class="sendButton" id="submitButtonPet"
+            type="submit">Finalizar cadastro</button>
+        </div>
+    </div>
+  </div>
+  <footer>
+    <div class="links_section">
+      <div>
+        <br><br><br>
+        <ul>
+          <li>
+            <a href="index.html">Início</a>
+          </li>
+          <li>
+            <a href="whoWeAre.html">Quem somos</a>
+          </li>
+          <li>
+            <a href="contactUs.html">Fale conosco</a>
+          </li>
+          <li>
+            <a href="faq.html">Ajuda</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </footer>
+  </div>
+  <script type="text/javascript" src="script-mobile-navbar.js"></script>
+  <script type="text/javascript" src="script-petRegistration.js"></script>
+</body>
+
+</html>

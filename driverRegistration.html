@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <title>Go Pet - Cadastro do(a) Motorista</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <nav>
+                <a class="logo" href="index.html">GoPet</a>
+                <div class="mobile-menu">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+                <ul class="nav-list">
+                    <li><a href="index.html">INÍCIO</a></li>
+                    <li><a href="whoWeAre.html">QUEM SOMOS</a></li>
+                    <li><a href="passenger.html">PASSAGEIRO</a></li>
+                    <li><a href="driver.html">MOTORISTA</a></li>
+                    <li><a href="faq.html">AJUDA</a></li>
+                    <li><a href="recommendations.html">RECOMENDAÇÕES</a></li>
+                    <li><a href="contactUs.html">FALE CONOSCO</a></li>
+                    <li><a href="callADriver.html">PEDIR CORRIDA</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="title">
+            <h1>Cadastro do(a) Motorista</h1>
+            <div id="errorMsg"></div>
+            <div id="successMsg"></div>
+        </div>
+
+        <div class="photos">
+            <img src="assets/img/tutor.png" class="registrationPhoto" id=registrationPhoto
+                alt="Selecione a foto do motorista"><br><br>
+            <input class="form-control" type="file" id="flImage" accept="image/*">
+        </div>
+
+        <div class="contentRegistration">
+            <div class="registrationForm" name="tutorRegistration" id="registrationForm">
+                <div class="form-data">
+                    <label id="labelName" for="name">Nome completo*</label><br>
+                    <input class="form-control" type="text" id="name" name="username" required>
+                    <br>
+                </div>
+                <br>
+
+                <div class="form-check">
+                    <label id="labelGender" for="gender">Gênero</label><br>
+                    <input class="form-check-input" name="mot_gender" type="radio" id="flexRadio1" required>
+                    <label class="form-check-label" for="flexRadio1">Feminino</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" name="mot_gender" type="radio" id="flexRadio2" required>
+                    <label class="form-check-label" for="flexRadio2">Masculino</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" name="mot_gender" type="radio" id="flexRadio3" required>
+                    <label class="form-check-label" for="flexRadio3">Não informar</label>
+                </div>
+                <br>
+                <div class="form-data">
+                    <label id="labelBirthday" for="birthday">Data de nascimento*</label><br>
+                    <input class="form-control" type="date" id="birthday" name="bdate" placeholder="__/__/____" required>
+                </div>
+                <br>
+                <div class="form-data">
+                    <label id="labelEmail" for="email">E-mail*</label><br>
+                    <input class="form-control" type="email" id="email" name="email" placeholder="exemplo@gopet.com.br" required>
+                </div>
+                <br>
+                <div class="form-data">
+                    <label id="labelCpf" for="CPF">CPF*</label><br>
+                    <input class="form-control" type="number" id="CPF" name="cpf" placeholder="___.___.___-__" required>
+                </div>
+                <br>
+                <div class="form-data">
+                    <label id="labelCnh" for="cnh">CNH*</label><br>
+                    <input class="form-control" type="number" id="CNH" name="cnh" required>
+                </div>
+                <br>
+                <div class="form-data">
+                    <label id="labelCep" for="cep">CEP*</label><br>
+                    <input class="form-control" type="number" id="CEP" name="cep" placeholder="_____-___" required>
+                </div>
+                <br>
+                <div class="form-data">
+                    <label id="labelAddress" for="address">Logradouro*</label><br>
+                    <input class="form-control" type="text" id="address" name="address" required>
+                </div>
+                <br>
+                <div class="form-data">
+                    <label id="labelNumber" for="houseNumber">Número*</label><br>
+                    <input class="form-control" type="number" id="houseNumber" name="houseNumber" required>
+                </div>
+                <br>
+                <div class="form-data">
+                    <label id="labelComplement" for="complement">Complemento</label><br>
+                    <input class="form-control" type="text" id="complement" name="complement">
+                </div>
+                <br>
+                <div class="form-data">
+                    <label id="labelNeighborhood" for="neighborhood">Bairro*</label><br>
+                    <input class="form-control" type="text" id="neighborhood" name="neighborhood" required>
+                </div>
+                <br>
+                <div class="form-data">
+                    <label id="labelCity" for="city">Cidade*</label><br>
+                    <input class="form-control" type="text" id="city" name="city" required>
+                </div>
+                <br>
+                <div class="form-data">
+                    <label id="labelState" for="state">Estado*</label><br>
+                    <input class="form-control" type="text" id="state" name="state" required>
+                </div>
+                <br>
+                <div class="form-data">
+                    <label id="labelCellphone" for="cellphone">Celular com DDD*</label><br>
+                    <input class="form-control" type="number" id="cellphone" name="cellphone" required>
+                </div>
+                <br>
+                <div class="vehicleData">
+                    <h1>Dados do veículo</h1><br>
+                    <div class="form-data">
+                        <label id="labelModel" for="model">Modelo*</label><br>
+                        <input class="form-control" type="text" id="model" name="model" required>
+                    </div>
+                    <br>
+                    <div class="form-data">
+                        <label id="labelColor" for="color">Cor*</label><br>
+                        <input class="form-control" type="text" id="color" name="color" required>
+                    </div>
+                    <br>
+                    <div class="form-data">
+                        <label id="labelPlaque" for="plaque">Placa do veículo*</label><br>
+                        <input class="form-control" type="text" id="plaque" name="plaque" required>
+                    </div>
+                    <br>
+                    <div class="form-data">
+                        <label id="labelPassword" for="password">Senha*</label><br>
+                        <input class="form-control" type="password" id="password" name="password"
+                            aria-describedby="passwordHelper" required>
+                        <i class="fa fa-eye" aria-hidden="true"></i>
+                    </div>
+                    <div class="form-data">
+                        <span class="form-text-aux" id="passwordHelper">
+                            A senha deve ter no mínimo 8 caracteres.
+                        </span>
+                    </div>
+                    <br>
+                    <div class="form-data">
+                        <label id="labelConfirm" for="confirmPassword">Confirmar Senha*</label><br>
+                        <input class="form-control" type="password" id="confirmPassword" name="confirmPassword"
+                            aria-describedby="passwordHelper" required>
+                        <i id="passwordView" class="fa fa-eye" aria-hidden="true"></i>
+                    </div>
+                    <br>
+                    <div class="form-data">
+                        <label id="labelCapacity" for="capacity">Porte do animal que tem capacidade de transportar*</label><br>
+                        <select id="capacity" name="capacity" class="form-control" required>
+                            <option selected class="form-data">Escolha uma opção</option>butto
+                            <option value="1">Pequeno</option>
+                            <option value="2">Médio</option>
+                            <option value="3">Grande</option>
+                        </select>
+                    </div>
+                </div>
+                <br>
+                <div class="buttons">
+                    <button onclick='driverRegistration()' class="sendButton" id="submitDriverButton" 
+                    type="submit">Finalizar cadastro</button>
+                </div>
+                <br><br>
+            </div>
+        </div>
+        <footer>
+            <div class="links_section">
+                <div>
+                    <ul>
+                        <li>
+                            <a href="index.html">Início</a>
+                        </li>
+                        <li>
+                            <a href="whoWeAre.html">Quem somos</a>
+                        </li>
+                        <li>
+                            <a href="contactUs.html">Fale conosco</a>
+                        </li>
+                        <li>
+                            <a href="faq.html">Ajuda</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </footer>
+    </div>
+    <script type="text/javascript" src="script-registration.js"></script>
+    <script type="text/javascript" src="script-mobile-navbar.js"></script>
+    <script type="text/javascript" src="script-driverRegistration.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+.tab-links{
+    margin-bottom: 32px;
+}
+
+.tab-links > button{
+    background: transparent;
+    font-size: 14px;   
+    padding: 16px;
+    cursor: pointer;
+    outline: none;
+    transition: all .3s ease-out;
+    border: none;
+    
+}
+
+.tab-links > button:hover, .tab-links > button.active:hover{
+    background-color: white;
+    border-radius: 0;
+    color: orangered;
+
+}
+
+.tab-links > button.active{
+
+    background-color: #F77F18;
+    color: white;
+    border-radius: 0;
+    
+}
+

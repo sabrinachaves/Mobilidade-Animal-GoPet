@@ -1,0 +1,748 @@
+
+p{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.title > h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-large;
+    color: #4F4F4F;
+    text-align: center;
+    margin-top: 65px;
+}
+
+.form-data > input{
+    height: 20px;
+}
+
+body {
+    background-color: #FFFAFA;
+}
+
+.form-control{
+    color: #4F4F4F;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 70%;
+}
+
+.form-text-aux{
+    color:gray;
+    font-size: small;
+    font-family: Arial;
+}
+
+.registrationForm label {
+    color: #4F4F4F;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: smaller;
+}
+
+.sendButton, .logoutButton, .saveButton, .petButton{
+    height: 25px;
+    background-color: #FF9052;
+    color:white;
+    font-weight: bold;
+    border: 0px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s;
+    width: 120px;
+}
+
+.cardButton{
+    height: 40px;
+    background-color: #FF9052;
+    color:white;
+    font-weight: bold;
+    border: 0px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s;
+    width: 180px;
+}
+
+.sendButton:hover, .logoutButton:hover, .saveButton:hover, .petButton:hover, .cardButton:hover{
+    background-color: orangered;
+    color: white;
+}
+
+.wrapper{
+    display: grid;
+    grid-template-columns: 3fr 1.5fr;
+    grid-template-rows: 85px 100px 1fr 30vh;
+    grid-template-areas: 
+    "menu menu"
+    "title title"
+    "form photo"
+    "footers footers";
+}
+
+
+@media (max-width: 700px){
+    .wrapper{
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "menu"
+        "title"
+        "photo"
+        "form"
+        "footers";
+    }
+    .photos{
+        margin-left: auto;
+        margin-right: auto;
+        width: 200px;
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+    .form-registration{
+        padding: 0% 10%;
+    }
+    .form-control{
+        width: 85%;
+    }
+    .fa-eye{
+        padding-left: 5px;
+    }
+    footer > div {
+        margin-top: 10%;
+        margin-left: 10vh;
+    }
+}
+
+.title{
+    grid-area: title;
+    justify-content: center;
+}
+
+.photos{
+    grid-area: photo;
+    margin-top: 18%;
+}
+
+.contentRegistration{
+    grid-area: form;
+    padding: 0% 10%;
+    margin-top: 8%;
+    margin-bottom: 8%;
+}
+
+#registrationPhoto{
+    height: 200px;
+}
+
+.vehicleData > h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-large;
+    color: #4F4F4F;
+    text-align: left;
+}
+
+.fa-eye{
+    padding-left: 5px;
+    cursor: pointer;
+    color:orangered;
+    transition: .3s;
+}
+
+.fa-eye:hover{
+    color: grey;
+}
+
+header{
+    grid-area: menu;
+}
+
+
+ *{
+    margin: 0;
+    padding: 0;
+    
+    }
+    
+    a{
+        color:rgb(0, 0, 0);
+        text-decoration: none;
+        transition: 0,3s;
+    }
+    
+    a:hover {
+    opacity: 0,7;
+    }
+    .logo {
+        font-size: 30px;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+    
+    }
+    
+    nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-family: Arial, Helvetica, sans-serif;
+        background: #0C0B0B;
+        height: 10vh;
+        color: white;
+    }
+    
+    .nav-list {
+        list-style: none;
+        display: flex;
+        font-size: 12px;
+    }
+    
+    .nav-list li{
+        letter-spacing: 3px;
+        margin-left: 32px;   
+    }
+    
+    .mobile-menu {
+        display: none;
+        cursor:pointer;
+    }
+    
+    .mobile-menu div{
+        width: 20px;
+        height: 2px;
+        background: #fff;
+        margin: 5px;
+    
+    }
+    
+    @media (max-width: 1300px) {
+        html, body{
+            position: relative;
+            overflow-x: hidden;
+        }
+        .nav-list {
+          position: absolute;
+          top: 10vh;
+          right: 0;
+          width: 50vw;
+          height: 90vh;
+          background: black;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-around;
+          transform: translateX(100%);
+          transition: transform 0.3s ease-in;
+        }
+        .nav-list li {
+          margin-left: 0;
+          opacity: 0;
+        }
+        .mobile-menu {
+          display: block;
+        }
+      }
+      
+      .nav-list.active {
+        transform: translateX(0);
+      }
+    
+      @keyframes navLinkFade {
+        from {
+          opacity: 0;
+          transform: translateX(50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+      
+      .mobile-menu.active .line1 {
+        transform: rotate(-45deg) translate(-8px, 8px);
+      }
+      
+      .mobile-menu.active .line2 {
+        opacity: 0;
+      }
+      
+      .mobile-menu.active .line3 {
+        transform: rotate(45deg) translate(-5px, -7px);
+      }
+    
+      .containerHome {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-top: 70px;
+        grid-area: loginArea;
+    }
+    
+    .card {
+      background-color: hsla(0, 0%, 100%, 0.125);
+      padding: 10%;
+      border-radius: 4%;
+      box-shadow: 3px 3px 1px 0px #00000060;
+      margin-bottom: 100px;
+    }
+    
+    .label-float input {
+        width: 100%;
+        padding: 3px 3px;
+        display: inline-block;
+        border: 0;
+        border-bottom: 2px solid rgb(0, 0, 0);
+        background-color: transparent;
+        outline:none;
+        min-width: 180px;
+        font-size:16px;
+        transition: all .3s ease-out;
+    }
+    
+    .label-float input:focus {
+        border-bottom: 2px solid rgb(182, 29, 29);
+    }
+    
+    
+    .label-float{
+        position:relative ;
+        padding-top: 13px;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+    .card > h1{
+      margin-bottom: 20px;
+      color: #976DD0;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+    }
+      
+    .label-float label{
+      color:gray;
+      pointer-events:none;
+      position: absolute;
+      top:0;
+      left:0;
+      margin-top: 13px;
+      transition: all .3s ease-out;
+      font-size: 10pt;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    
+    .label-float input:valid + label,
+    .label-float input:valid + label{
+      font-size: 13px;
+      margin-top:0;
+      color: white;
+    }
+    
+      button{
+        background:transparent;
+        border-color: white;
+        color: orangered;
+        padding: 7px;
+        font-weight: bold;
+        font-size: 12px;
+        margin-top: 20px;
+        border-radius: 10px;
+        cursor: pointer;
+        outline: none;
+        transition: all .6s ease-out;
+    
+    }
+    
+    button:hover{
+       background-color:white;
+       color: orangered;
+      
+    }
+    
+    .justify-center{
+      display: flex;
+      justify-content: center;
+    
+    }
+    
+    hr{
+      margin-top: 10%;
+      margin-bottom: 10%;
+      width:60%;
+    }
+    
+    nav a{
+      font-weight:bold;
+      text-decoration: none;
+      font-size: 12px;
+      color:white;
+      text-align: center;
+    }
+    
+    .containerHome a:hover{
+      color: white;
+      transition: .3s ease-out;
+    }
+
+    .containerHome a{
+        font-weight:bold;
+        text-decoration: none;
+        font-size: 12px;
+        color: #4169E1;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .reset-senha{
+        padding:2px;
+    }
+
+    .background-home{
+        background: rgb(235,218,242); /* Old browsers */
+        background: -moz-linear-gradient(top, rgba(235,218,242,1) 0%, rgba(242,197,109,1) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, rgba(235,218,242,1) 0%,rgba(242,197,109,1) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, rgba(235,218,242,1) 0%,rgba(242,197,109,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebdaf2', endColorstr='#f2c56d',GradientType=0 );
+    }
+
+    .homeRegistration label{
+        font-family: Arial, Helvetica, sans-serif;
+        color:#4F4F4F;
+        font-size: 10pt;
+    }
+
+    .textHome > h1{
+        color: #4F4F4F;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .textHome > p{
+        color: #4F4F4F;
+    }
+
+    .wrapperHome{
+        display: grid;
+        grid-template-columns: 3fr 1.5fr;
+        grid-template-rows: 85px 1fr 30vh;
+        grid-template-areas: 
+        "menu menu"
+        "mainContent loginArea"
+        "footers footers";
+    }
+
+    .textHome{
+        grid-area: mainContent;
+        padding: 10%;
+    }
+
+
+    @media (max-width: 700px){
+        .wrapperHome{
+            display:grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            grid-template-areas: "menu"
+            "mainContent"
+            "loginArea"
+            "footers";
+        }
+        .containerHome {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            grid-area: loginArea;
+            margin-top: 20px;
+        }
+    }
+
+    footer {
+        width: 100%;
+        background-color: #47525E;
+        height: 30vh;
+        grid-area: footers;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: small;
+    }
+    
+
+    footer > div {
+        margin-top: 7vh;
+        margin-left: 10vh;
+    }
+    
+    li {
+        list-style: none;
+    }
+
+    footer a{
+        color:#FFFAFA;
+    }
+
+    #errorMsg, #errorMsg2{
+        text-align: center;
+        color: #ff0000;
+        background-color: #ffbbbb;
+        padding: 15px;
+        border-radius: 4px;
+        display: none;
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    }
+
+
+    #successMsg{
+        text-align: center;
+        color: #00bb00;
+        background-color: #bbffbe;
+        padding: 15px;
+        border-radius: 4px;
+        display: none;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #photoLateral {
+        width: 280px;
+        height: 400px;
+    }
+
+    .text > h1 { 
+        padding: 20px;
+        font-size: x-large;
+        font-family: Arial;  
+        color: #4f4f4f
+    }
+    
+    .text {
+        grid-column: form;
+        max-width: 100%;
+        align-items: center;   
+    }
+
+    .inputsFaleConosco {
+        padding: 0 20px;
+        font-size: 15px;
+        font-family: Arial;
+        align-items: center;
+        color: #4f4f4f;
+    }
+
+    #buttonFaleConosco {
+        background-color: #FF9052;
+        border-radius: 4px;
+        border: none;
+        color: white;
+        margin: 10px 20px;
+        width:100px;
+        height:40px;
+        cursor: pointer;
+        text-align: center;      
+    }
+
+    #buttonFaleConosco:hover{
+        background-color: orange;
+        color: white;
+    }
+
+    .driverPhoto{
+        width: 100%;
+        color: #976DD0;
+        font-weight: bold;
+        font-size: large;
+        display: inline-flex;
+        flex-wrap: wrap;
+        justify-content:space-evenly;
+        align-items: center;
+        background-color: transparent;
+        border-radius: 4%;
+        box-shadow: 3px 3px 3px 3px #00000060;
+        
+    }
+
+    .message > textarea{
+        border-radius: 10px;
+        width: 100%;
+    }
+
+    .dPhoto{
+        width: 20%;
+        height: 20%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        border-radius: 10px;
+        border-color: #FF9052;
+        border-style:solid;
+        border-width: 4px;
+        cursor: pointer;
+    }
+
+    @media (max-width: 700px){
+        .dPhoto{
+            width: 100px;
+            height: 100px;
+        }
+        .driverPhoto{
+            align-items:unset;
+        }
+        #tripMap{
+           width: 100%;
+        }
+    }
+    
+    .map{
+        text-align: center;
+        margin-bottom: 10%;
+    }
+
+    .map > h1{
+        padding: 3%;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #4F4F4F;
+        font-size: 35px;
+    }
+
+    .driverName > label{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: small;
+    }
+
+/* modal Recover Password*/
+
+.modal, .modal2{
+    width: 40%;
+    background-color: #4F4F4F;
+    border-radius: 5px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    display: none;
+    animation: animate;
+    animation-duration: 800ms;
+}
+
+.reset-senha > p > a{
+    cursor: pointer;
+}
+
+/* modal cadastrar método de pagamento */
+
+.modal3{
+    width: 30%;
+    background-color: #4F4F4F;
+    border-radius: 5px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    display: none;
+    animation: animate;
+    animation-duration: 800ms;
+}
+
+.cardData > .form-data > label, .cardData > .form-check > label{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: small;
+}
+
+.cardData{
+    padding: 50px;
+    padding-bottom: 0;
+}
+
+.cardData > .form-data > input{
+    width: 100%;
+}
+
+.registrationButtonArea{
+    text-align: center;
+}
+
+@keyframes animate{
+    from{opacity: 1;}
+    from{opacity: 0;}
+}
+
+.fechar{
+    width: 30px;
+    height: 30px;
+    background-color: #976DD0;
+    border-radius: 50%;
+    float: right;
+    margin-top: 1%;
+    margin-right: 1%;
+    cursor:pointer;
+}
+
+.fechar:hover{
+    background-color: purple;
+}
+
+.labelX{
+    position: relative;
+    left:36%;
+    top:16%;
+    color: #FFFAFA;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+
+.recoverText{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    margin-top: 3%;
+    margin-left: 5%;
+    margin-right: 5%;
+    float: left;
+    font-size: small;
+}
+
+#recoverPassword{
+    float: left;
+    width: 50%;
+    margin-top: 5%;
+    margin-left: 25%;
+}
+
+.sendEmail{
+    background-color: #976DD0;
+    border: none;
+    border-radius: 3px;
+    color: #FFFAFA;
+    margin-top: 8%;
+    margin-bottom: 5%;
+}
+
+.cardRegistrationButton{
+    background-color: #976DD0;
+    border: none;
+    border-radius: 3px;
+    color: #FFFAFA;
+    margin-bottom: 5%;
+}
+
+.sendEmail:hover, .cardRegistrationButton:hover{
+    background-color: purple;
+    color: #FFFAFA;
+    transition: .3s;
+}
+
+.emailButton{
+    text-align: center;
+}
+
+.modal > label, .modal2 > label{
+    text-align: center;
+}
+
+@media (max-width: 700px){
+    .modal, .modal2{
+        width:80%;
+    }
+    .modal3{
+        width: 85%;
+    }
+}
+
+@media(min-width: 1200px){
+    .emailButton{
+        margin-top: 12%;
+    }
+    .sendEmail{
+        margin-top: 2%;
+    }
+}

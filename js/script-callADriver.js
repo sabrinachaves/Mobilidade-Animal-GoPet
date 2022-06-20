@@ -21,7 +21,7 @@ let validAgendamento = false
 //Verificar se está logado
 if (sessionStorage.getItem('tokenP') == null && userLogado == null){
     alert('Você deve fazer login para acessar esta página!')
-    window.location.href = 'index.html'
+    window.location.href = '/index.html'
     }
 
 origin.addEventListener('keyup', ()=>{

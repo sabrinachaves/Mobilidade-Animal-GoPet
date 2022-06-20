@@ -106,7 +106,7 @@ function petRegistration(){
             window.scrollTo(0, 0);
 
             setTimeout(()=>{
-                window.location.href = 'tutorArea.html'
+                window.location.href = '/html/tutorArea.html'
             }, 3000)
     }else{
         errorMsg.setAttribute('style', 'display:block')

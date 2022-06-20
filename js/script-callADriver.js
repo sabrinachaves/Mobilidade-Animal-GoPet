@@ -42,7 +42,7 @@ destination.addEventListener('keyup', ()=>{
 
 function callADriver(){
     if(validOrigin && validDestination && (pet1.value || pet2.value) && appointment_date.value.length <1 && payment.value){
-        window.location.href = 'tripArea.html'
+        window.location.href = '/html/tripArea.html'
     }else if(validOrigin && validDestination && (pet1.value || pet2.value) && appointment_date.value.length >1 && payment.value){
         alert("A sua corrida foi agendada. As instruções serão enviadas por e-mail.")
     }else{

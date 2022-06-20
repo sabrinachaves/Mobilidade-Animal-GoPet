@@ -328,7 +328,7 @@ function driverRegistration(){
             window.scrollTo(0, 0);
 
             setTimeout(()=>{
-                window.location.href = 'index.html'
+                window.location.href = '/index.html'
             }, 3000)
     }else{
         errorMsg.setAttribute('style', 'display:block')

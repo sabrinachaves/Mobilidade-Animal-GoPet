@@ -2,7 +2,7 @@ let userLogado = JSON.parse(sessionStorage.getItem('userLogadoM'))
 
 if(sessionStorage.getItem('tokenM') == null && userLogado == null){
     alert('Você deve fazer login para acessar esta página!')
-    window.location.href = 'index.html'
+    window.location.href = '/index.html'
     }else{
     
     let ola = document.getElementById("title")
@@ -35,7 +35,7 @@ if(sessionStorage.getItem('tokenM') == null && userLogado == null){
 function logout(){
     sessionStorage.removeItem('tokenM')
     sessionStorage.removeItem('userLogadoM')
-    window.location.href = 'index.html'
+    window.location.href = '/index.html'
 }
 
 function saveModifications(){

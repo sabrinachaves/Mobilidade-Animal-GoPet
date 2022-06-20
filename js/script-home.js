@@ -72,7 +72,7 @@ function tutorLogin(){
     })
 
     if(username.value == userValid.user && password.value == userValid.senha && userValid.user.length > 1){
-        window.location.href = 'tutorArea.html'
+        window.location.href = '/html/tutorArea.html'
         errorMsg.setAttribute('style', 'display:none')
         errorMsg.innerHTML = ''
         let tokenP = Math.random().toString(16).substr(2) + Math.random().toString(16).substr(2)
@@ -134,7 +134,7 @@ function driverLogin(){
 
     if(usernameDriver.value == userValidDriver.user && passwordDriver.value == userValidDriver.senha 
         && userValidDriver.user.length > 1){
-        window.location.href = 'driversArea.html'
+        window.location.href = '/html/driversArea.html'
         errorMsg2.setAttribute('style', 'display:none')
         errorMsg2.innerHTML = ''
         

@@ -36,7 +36,7 @@ message.addEventListener('change', ()=>{
 function contactUs(){
     if(validName && validEmail && validMessage){
         alert('Mensagem enviada com sucesso!')
-        window.location.href='contactUs.html'
+        window.location.href='/html/contactUs.html'
     }else{
         alert('Você deve preencher todos os campos')
     }
